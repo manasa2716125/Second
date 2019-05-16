@@ -7,11 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h4>Login Succesfull</h4>
-<h3>Welcome to 
-<%= request.getParameter("name") %>  
-</h3>
-New Employee Register <a href="newEmployee">here</a>
 
+<h4>Login UnSuccesfull</h4>
+<h3>
+<%= request.getParameter("name") %>  
+Does not Exit
+</h3>
+New Employee Register <a href="newlogin">here</a><br><br>
+New Employee Register <a href="newEmployee">here</a>
 </body>
 </html>

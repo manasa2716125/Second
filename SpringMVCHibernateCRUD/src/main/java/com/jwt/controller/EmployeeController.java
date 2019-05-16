@@ -23,8 +23,7 @@ import com.jwt.service.EmployeeService;
 @Controller
 public class EmployeeController {
 
-	private static final Logger logger = Logger
-			.getLogger(EmployeeController.class);
+	
 
 	public EmployeeController() {
 		System.out.println("EmployeeController()");
@@ -75,62 +74,35 @@ public class EmployeeController {
 	public ModelAndView loginEmployee(@ModelAttribute Employee employee) 
 	
 	{
+		
 		System.out.println("Welcome.........");
-		if (employee.getId() == 0) { // if employee id is 0 then creating the
-			// employee other updating the employee
-			//employeeService.addEmployee(employee);
+		if (employee.getName() == employee.getName() )
+		{ 
+			
+			
 			System.out.println("Login Succesfull");
 			return new ModelAndView("log");
 			
-			//return new ModelAndView("redirect:/");
+			
 		} else {
 			//employeeService.updateEmployee(employee);
 			System.out.println("Login UnSuccesfull");
+			return new ModelAndView("logout");
 		}
-		return new ModelAndView("redirect:/");
+		//return new ModelAndView("redirect:/");
 	}
 	
 	
 	
 	
 	
-	/* @RequestMapping(value ="/loginSuccess" ,method=RequestMethod.POST)
-	public ModelAndView loginSuccess( @ModelAttribute("studentCredential") Login login,BindingResult bindingResult){
-		if(bindingResult.hasErrors()){
-			return new ModelAndView("login");
-		}
-
-		ModelAndView modelAndView = new ModelAndView("welcome");
-		Employee employee = getEmployeeService().validateStudentCredential(login.getName(), login.getPassword());
-		if(employee!= null){
-			modelAndView.addObject("Employee", employee);
-			return modelAndView;
-		}else{
-			 modelAndView = new ModelAndView("notFound");
-		}
-		return modelAndView;
-	}*/
-	 
-	 
 	
 	
 	
 	
 	
 	
-	/*
-	 * @RequestMapping(value ="/loginSuccess" ,method=RequestMethod.POST) public
-	 * ModelAndView loginSuccess(@Valid @ModelAttribute("studentCredential") Login
-	 * studentCredential,BindingResult bindingResult){
-	 * if(bindingResult.hasErrors()){ return new ModelAndView("login"); }
-	 * 
-	 * ModelAndView modelAndView = new ModelAndView("welcome"); Employee employee =
-	 * employeeService().validateStudentCredential(login.getName(),
-	 * studentCredential.getPassword()); if(employeeId!= null){
-	 * modelAndView.addObject("student", employee); return modelAndView; }else{
-	 * modelAndView = new ModelAndView("notFound"); } return modelAndView; }
-	 * 
-	 */
+	
 	
 	
 	
