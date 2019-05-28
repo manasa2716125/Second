@@ -1,26 +1,26 @@
 package com.jwt.model;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.validation.constraints.Size;
 
+import org.hibernate.validator.constraints.NotEmpty;
 
-public class Login  {
+public class Login {
 	
-
-	@Column
+	
+	@NotEmpty
+	//@NotEmpty(message="Name must be above 3 Characters")
+	@Column(name="name")
+	// @Size(min=3,message="Name must be above 3 Characters")
 	private String name;
-	
-	@Column
+	@NotEmpty
+	//@NotEmpty(message="Name must be above 3 Characters")
+	@Column(name="name")
+	// @Size(min=5,message="Name must be above 5 Characters")
 	private String password;
 
 	
-
+     
 	public String getName() {
 		return name;
 	}
@@ -42,8 +42,4 @@ public class Login  {
 		return "Login [name=" + name + ", password=" + password + "]";
 	}
 	
-	
-
-	
-
 }

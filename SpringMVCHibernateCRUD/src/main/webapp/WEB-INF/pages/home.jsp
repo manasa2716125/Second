@@ -14,11 +14,13 @@
 		
 		<table border="1">
 
-			<th>Name</th>
+			<th>UserName</th>
 			<th>Password</th>
 			<th>Email</th>
-			<th>Address</th>
-			<th>Telephone</th>
+			<th>Date Of Birth</th>
+			<th>Country</th>
+			<th>Gender</th>
+			<th>Age</th>
 			<th>Action</th>
 
 			<c:forEach var="employee" items="${listEmployee}">
@@ -27,17 +29,21 @@
 					<td>${employee.name}</td>
 					<td>${employee.password}</td>
 					<td>${employee.email}</td>
-					<td>${employee.address}</td>
-					<td>${employee.telephone}</td>
+					 <td>${employee.dateOfBirth}</td>
+					<td>${employee.country}</td>
+					<td>${employee.gender}</td>
+					<td>${employee.age}</td>
+					
 					<td><a href="editEmployee?id=${employee.id}">Edit</a>
 						&nbsp;&nbsp;&nbsp;&nbsp; <a
-						href="deleteEmployee?id=${employee.id}">Delete</a></td>
+						href="deleteEmployee?id=${employee.id}" onclick="if (!(confirm('Are you sure want to delete this Employee permanently?')))
+            return false">Delete</a></td>
 
 				</tr>
 			</c:forEach>
 		</table>
 		<h4>
-			New Employee Register <a href="newEmployee">here</a>
+			New Employee Register <a href="newEmployee">here</a><br><br>
 			New Employee Login <a href="newlogin">here</a>
 		</h4>
 	</div>

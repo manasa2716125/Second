@@ -17,47 +17,50 @@
 	</h2>
 	<div align="center">
 		<form action="userRegistration" method="post">
-			<table align="center" border="1">
+		<table>
+			<p>
 				<tr>
 					<td colspan="2" align="center"><b>User Registration</b></td>
-				</tr>
+				</tr></p>
+				<p>
 				<tr>
-					<td>Username* :</td>
+					<td>Username :</td>
 					<td><input type="text" name="username" required></td>
-				</tr>
-				<tr>
-					<td>Password* :</td>
+				</tr></p>
+				<p><tr>
+					<td>Password :</td>
 					<td><input type="password" name="password" required></td>
-				</tr>
-				<tr>
-					<td>Conform Password* :</td>
+				</tr></p>
+				<p><tr>
+					<td>Conform Password :</td>
 					<td><input type="password" name="confPassword" required></td>
-				</tr>
-				<tr>
-					<td>First Name* :</td>
+				</tr></p>
+				<p><tr>
+					<td>First Name :</td>
 					<td><input type="text" name="firstName" required></td>
-				</tr>
-				<tr>
-					<td>Last Name* :</td>
+				</tr></p>
+				<p><tr>
+					<td>Last Name :</td>
 					<td><input type="text" name="lastName" required></td>
-				</tr>
-				<tr>
-					<td>Date of Birth* :</td>
+				</tr></p>
+				<p><tr>
+					<td>Date of Birth :</td>
 					<td><input type="date" name="dob" required></td>
-				</tr>
-				<tr>
+				</tr></p>
+				<p><tr>
 					<td>Mobile Number :</td>
 					<td><input type="number" name="mobileNo"></td>
-				</tr>
-				<tr>
+				</tr></p>
+				<p><tr>
 					<td>Email Id :</td>
 					<td><input type="email" name="emailId"></td>
-				</tr>
-				<tr>
+				</tr></p>
+				<p><tr>
 					<td align="center"><input type="submit" value="Register User"></td>
 					<td align="center"><input type="reset" name="Reset Form"></td>
-				</tr>
-			</table>
+				</tr></p>
+				</table>
+			
 		</form>
 	</div>
 </body>

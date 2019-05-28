@@ -39,7 +39,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	public Employee updateEmployee(Employee employee) {
-		// TODO Auto-generated method stub
+		
 		return employeeDAO.updateEmployee(employee);
 	}
 
@@ -47,31 +47,4 @@ public class EmployeeServiceImpl implements EmployeeService {
 		this.employeeDAO = employeeDAO;
 	}
 
-	@Override
-	public Employee validateLogin(String name, String password) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void validateLogin(int employeeId) {
-	}
-	/*
-	 * @Override public Employee validateStudentCredential(String name, String
-	 * password) { Employee employee =
-	 * getEmployeeDAO().getStudentDetailsByNameAndPassword(name, password); return
-	 * employee; }
-	 */
-
-	@Override
-	public Employee validateStudentCredential(String name, String password) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	
-	
 }
-	
-
-

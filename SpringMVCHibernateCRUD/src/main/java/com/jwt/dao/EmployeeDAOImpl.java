@@ -3,13 +3,10 @@ package com.jwt.dao;
 import java.util.List;
 
 import org.hibernate.SessionFactory;
-import org.hibernate.criterion.DetachedCriteria;
-import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.orm.hibernate4.HibernateTemplate;
 
-import com.jwt.model.Employee;
+import com.jwt.model.*;;
 
 @Repository
 public class EmployeeDAOImpl implements EmployeeDAO {
@@ -19,8 +16,25 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
 	public void addEmployee(Employee employee) {
 		sessionFactory.getCurrentSession().saveOrUpdate(employee);
-
+		
+		
 	}
+		
+	/*
+	 * public void validateUser(Employee employee) { // String sql =
+	 * "select * from users where fname='" + employee.getFname() +
+	 * "' and password='" + employee.getPassword() //+ "'"; return (Employee)
+	 * sessionFactory.getCurrentSession().get( Employee.class, empid);
+	 * 
+	 * 
+	 * // List<User> users = jdbcTemplate.query(sql, new UserMapper()); // return
+	 * users.size() > 0 ? users.get(0) : null;
+	 * 
+	 * }
+	 */
+		
+
+	
 
 	@SuppressWarnings("unchecked")
 	public List<Employee> getAllEmployees() {
@@ -49,35 +63,5 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 		sessionFactory.getCurrentSession().update(employee);
 		return employee;
 	}
-	
-	
-	/*@SuppressWarnings("unchecked")
-	@Override
-	public Employee getStudentDetailsByNameAndPassword(String name,String password){
-		DetachedCriteria detachedCriteria =  DetachedCriteria.forClass(Employee.class);
-		detachedCriteria.add(Restrictions.eq("name", name));
-		detachedCriteria.add(Restrictions.eq("password", password));
-		List<Employee> findByCriteria = (List<Employee>) hibernateTemplate.findByCriteria(detachedCriteria);
-		if(findByCriteria !=null && findByCriteria.size()>0)
-		return findByCriteria.get(0);
-		else
-			return null;
-	}*/
 
-	@Override
-	public boolean saveStudent(Employee employee) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public Employee getStudentDetailsByNameAndPassword(String name, String password) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	/*
-	 * @Override public Employee getStudentDetailsByEmailAndPassword(String name,
-	 * String password) { // TODO Auto-generated method stub return null; }
-	 */
 }
